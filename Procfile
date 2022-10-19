@@ -1,1 +1,1 @@
-web: python3 discord.py
+worker: python3 discord.py
