@@ -1,5 +1,3 @@
-# This example requires the 'message_content' privileged intent to function.
-
 import discord
 import random
 import asyncio
@@ -41,4 +39,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('MTAyNzE1MTU4NDk0NzM1MTU2Mg.GYEtLc.bIdiWjmLDZUXp7RY76Nr1CmvrTblwKMfykLVsQ')
+client.run('TOKEN')
