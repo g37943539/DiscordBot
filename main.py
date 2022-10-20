@@ -5,14 +5,15 @@ import asyncio
 
 class MyClient(discord.Client):
     async def on_ready(self):
+        #在PowerShell上print資訊
         print(f'Logged in as {self.user} (ID: {self.user.id})')
         print('------')
 
-    async def on_message(self, message):
-        # we do not want the bot to reply to itself
+    async def on_message(self, message):#訊息函式
+        # 不要讓他自己回覆自己
         if message.author.id == self.user.id:
             return
-
+        
         if message.content.startswith('!嗨'):
             await message.reply('銃三小 低能兒', mention_author=True)
 
@@ -39,4 +40,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = MyClient(intents=intents)
-client.run('MTAyNzE1MTU4NDk0NzM1MTU2Mg.Gh1zal.n49HnKXZHyJDJXCZLSrCoXAyou3_HXxfCtS3rU')
+client.run('token')
